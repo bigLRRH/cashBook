@@ -1,0 +1,75 @@
+body {
+    background-color: #000000;
+    background-image: url(../images/login_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_box {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.618);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    color: #000;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+}
+
+.input_box {
+    width: 300px;
+    height: 30px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: rgba(255, 255, 255, 0.618);
+}
+
+.verification_box {
+    width: 180px;
+    height: 30px;
+    width: 180px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: rgba(255, 255, 255, 0.618);
+}
+
+.button_box {
+    width: 300px;
+    height: 35px;
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 5px;
+    background-color: #64a9d9;
+    cursor: pointer;
+    color: #fff;
+}
+
+.logo {
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    top: 10px;
+    margin: auto;
+    background-image: url(../images/login_logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
