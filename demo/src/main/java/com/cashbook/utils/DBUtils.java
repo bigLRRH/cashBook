@@ -7,7 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBUtils {
-    public static String db_url = "jdbc:mysql://localhost:3306";
+    public static String driver_path = "com.mysql.cj.jdbc.Driver";
+    public static String db_url = "jdbc:mysql://localhost:3306/cashBook";
     public static String db_user = "root";   //username
     public static String db_password = "123456"; //password
 
@@ -18,7 +19,7 @@ public class DBUtils {
     public static Connection getConn () {
         Connection conn = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName(driver_path);
             conn = DriverManager.getConnection(db_url, db_user, db_password);
         } catch (Exception e) {
             e.printStackTrace();

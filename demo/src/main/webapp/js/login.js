@@ -1,15 +1,23 @@
-function login_check() {
-    var loginname = document.getElementById("loginname");
-    var loginpwd = document.getElementById("loginpwd");
-    var username_pattern = /^\w{3,16}$/;//表示数字,字母,下划线，3-15位
-    var password_pattern = /^(?=.*[a-zA-Z])(?=.*\d).{6,16}$/;//至少包含字母、数字，8-127位
-    if (!username_pattern.test(loginname.value)) {
-        alert("用户名错误");
-        return false;
+var username_pattern = /^\w{3,20}$/;//username must be between 3 and 20 characters
+var password_pattern = /^(?=.*[a-zA-Z])(?=.*\d).{8,16}$/;//password must be 8 and 16 characters
+
+var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : ActiveXObject("Microsoft.XMLHTTP");
+
+
+function login() {
+    var username = document.getElementById("login_username").value;
+    var password = document.getElementById("login_password").value;
+    var verfication_code_answer = document.getElementById("login_password").value;
+    //判断用户名格式
+    if (!username_pattern.test(username)) {
+        alert("Username must be between 3 and 20 characters");
+        return;
     }
-    if (!password_pattern.test(loginpwd.value)) {
-        alert("密码错误");
-        return false;
+    //判断密码格式
+    if (!password_pattern.test(password)) {
+        alert("Password must be between 8 and 16 characters");
+        return;
     }
-    return true;
+    //验证码判断
+    
 }
