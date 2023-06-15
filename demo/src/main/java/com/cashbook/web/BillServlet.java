@@ -11,7 +11,7 @@ import com.cashbook.entity.Bill;
 import com.cashbook.service.BillService;
 import com.cashbook.utils.WebUtils;
 
-public class BillServlet extends HttpServlet{
+public class BillServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;// 不知道是什么
 	private BillService billService = new BillService();
 
@@ -103,6 +103,5 @@ public class BillServlet extends HttpServlet{
 		List<Bill> bill = billService.query(keyword);
 		request.setAttribute("bill", bill);
 		request.getRequestDispatcher("/query.jsp").forward(request, response);
-
 	}
 }

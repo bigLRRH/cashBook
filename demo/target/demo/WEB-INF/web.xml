@@ -1,15 +1,45 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-   <servlet>
+  <servlet>
     <servlet-name>HelloServlet</servlet-name>
     <servlet-class>com.cashbook.HelloServlet</servlet-class>
   </servlet>
+
+  <servlet>
+    <servlet-name>BillServlet</servlet-name>
+    <servlet-class>com.cashbook.web.BillServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>VerificationCodeServlet</servlet-name>
+    <servlet-class>com.cashbook.web.VerificationCodeServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.cashbook.web.LoginServlet</servlet-class>
+  </servlet>
+
+
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/HelloServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>BillServlet</servlet-name>
+    <url-pattern>/bs</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>VerificationCodeServlet</servlet-name>
+    <url-pattern>/vcs</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/ls</url-pattern>
   </servlet-mapping>
 </web-app>

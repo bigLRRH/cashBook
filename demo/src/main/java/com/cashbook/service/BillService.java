@@ -6,7 +6,7 @@ import com.cashbook.entity.Bill;
 import com.cashbook.dao.BillDao;
 
 public class BillService {
-    BillDao billDao;
+    BillDao billDao = new BillDao();
 
 	public int add(Bill bill) {
 		return billDao.add(bill);
