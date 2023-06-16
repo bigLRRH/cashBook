@@ -38,8 +38,7 @@ function verificationCode_reset1() {
     xhr.send(null);
 }
 //未采用
-async function verificationCode_reset2()
-{
+async function verificationCode_reset2() {
     url = "../vcs?action=reset";
     response = await fetch(url);
     document.getElementById("verification_code").value = response.headers.get("VerificationCode");
@@ -50,19 +49,19 @@ async function verificationCode_verify1(answer) {
     var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : ActiveXObject("Microsoft.XMLHTTP");
     xmlhttp.open("GET", "../vcs?action=verify&answer=" + answer, true);
     var flag;
-    await new Promise((resolve,reject)=>{
+    await new Promise((resolve, reject) => {
         xmlhttp.onreadystatechange = function () {//监听
             flag = xmlhttp.getResponseHeader("verify");
             resolve();
         }
+        xmlhttp.send(null);
     })
-    xmlhttp.send(null);
-    return flag = "true" ? true : false;
+    return flag == "true";
 }
 //fetch
 async function verificationCode_verify2(answer) {
-  var url = "../vcs?action=verify&answer="+ answer;
-  var response = await fetch(url);
-  var flag = response.headers.get("verify");
-  return flag == "true" ? true : false;
+    var url = "../vcs?action=verify&answer=" + answer;
+    var response = await fetch(url);
+    var flag = response.headers.get("verify");
+    return flag == "true";
 }

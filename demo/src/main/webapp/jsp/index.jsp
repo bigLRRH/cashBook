@@ -4,9 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>家庭记账本主页</title>
-	<!-- 采用绝对路径导入css文件 -->
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	<!-- 采用绝对路径导入jquery文件 -->
 	<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
 	<script type="text/javascript">
 	$(function () {
